@@ -1,0 +1,59 @@
+FormElementsWithFlair
+=====================
+
+Doesn't it bother you that the form elements in your application render differently in each browser and you then have to put a bunch of extra styles in your css files?
+
+Well, your inputs can look flawless with some flair. Introducing FormElementsWithFlair, which will render your checkboxes, radio buttons and select lists flawlessly in FireFox, Safari, Internet Explorer 7, Opera and others. FieldsWithFlair implements Ryan Fait's Custom Form Elements javascript into your application the Rails way, a single terminal command.
+
+For more information on Ryan Fait's Custom Form Elements javascript library:
+http://ryanfait.com/resources/custom-checkboxes-and-radio-buttons
+
+
+
+
+Usage
+=====
+
+From application root:
+ruby script/generate my_fields_want_to_express_themselves
+
+
+Once script is finished running, css will be outputted, copy and paste it into your application css file.
+
+
+Add the following to the top your layout view:
+<%= javascript_include_tag "custom-form-elements.js" %>
+
+
+To use the custom fields, add the class name "with_flair" to any checkbox, radio or select. Or even better, use these with_flair form helpers:
+check_box_with_flair
+radio_button_with_flair
+select_with_flair
+
+... they even come in form_for version (ex: f.select_with_flair)
+
+
+
+
+Customization
+=============
+By default, FieldsWithFlair will use Ryan Fait's example checkbox and radio buttons. These images can be modified by using a image editor such as Photoshop. For more information on customization, read: http://ryanfait.com/resources/custom-checkboxes-and-radio-buttons
+
+my_fields_want_to_express_themselves generator takes in the following options:
+with_class - class name for custom style (default: "with_flair")
+checkbox_height - height of checkbox (default: 25)
+radio_height - height of radio button (default: 25)
+select_width - width of select (default: 190)
+images_path - directory to store custom field graphics (default: "public/images/fields_with_flair")
+
+
+Copyright (c) 2009 Mark Malawski, released under the MIT license
+
+
+
+
+License
+=======
+Ryan Fait's Custom Form Elements script is licensed under a Creative Commons license
+
+FormElementsWithFlair Copyright (c) 2009 Mark Malawski, released under the MIT license
