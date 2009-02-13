@@ -54,7 +54,7 @@ class MyFieldsWantToExpressThemselvesGenerator < Rails::Generator::NamedBase
          /* Custom Select */
          span.select {
             position: absolute;
-            width: 158#{(@select_width.to_i - 32)}px; /* With the padding included, the width is 190 pixels: the actual width of the image. */
+            width: #{(@select_width.to_i - 32)}px; /* With the padding included, the width is 190 pixels: the actual width of the image. */
             height: 21px;
             padding: 0 24px 0 8px;
             color: #fff;
