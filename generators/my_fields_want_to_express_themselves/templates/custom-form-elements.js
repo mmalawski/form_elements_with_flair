@@ -27,7 +27,7 @@ var selectWidth = "<%= select_width %>";
 
 /* No need to change anything after this */
 
-document.write('<style type="text/css">input.styled { display: none; } select.styled { position: relative; width: ' + selectWidth + 'px; opacity: 0; filter: alpha(opacity=0); z-index: 5; }</style>');
+document.write('<style type="text/css">input.<%= with_class %> { display: none; } select.<%= with_class %> { position: relative; width: ' + selectWidth + 'px; opacity: 0; filter: alpha(opacity=0); z-index: 5; }</style>');
 
 var Custom = {
 	init: function() {
@@ -55,7 +55,7 @@ var Custom = {
 		}
 		inputs = document.getElementsByTagName("select");
 		for(a = 0; a < inputs.length; a++) {
-			if(inputs[a].className == "styled") {
+			if(inputs[a].className == "<%= with_class %>") {
 				option = inputs[a].getElementsByTagName("option");
 				active = option[0].childNodes[0].nodeValue;
 				textnode = document.createTextNode(active);
@@ -109,13 +109,13 @@ var Custom = {
 	clear: function() {
 		inputs = document.getElementsByTagName("input");
 		for(var b = 0; b < inputs.length; b++) {
-			if(inputs[b].type == "checkbox" && inputs[b].checked == true && inputs[b].className == "styled") {
+			if(inputs[b].type == "checkbox" && inputs[b].checked == true && inputs[b].className == "<%= with_class %>") {
 				inputs[b].previousSibling.style.backgroundPosition = "0 -" + checkboxHeight*2 + "px";
-			} else if(inputs[b].type == "checkbox" && inputs[b].className == "styled") {
+			} else if(inputs[b].type == "checkbox" && inputs[b].className == "<%= with_class %>") {
 				inputs[b].previousSibling.style.backgroundPosition = "0 0";
-			} else if(inputs[b].type == "radio" && inputs[b].checked == true && inputs[b].className == "styled") {
+			} else if(inputs[b].type == "radio" && inputs[b].checked == true && inputs[b].className == "<%= with_class %>") {
 				inputs[b].previousSibling.style.backgroundPosition = "0 -" + radioHeight*2 + "px";
-			} else if(inputs[b].type == "radio" && inputs[b].className == "styled") {
+			} else if(inputs[b].type == "radio" && inputs[b].className == "<%= with_class %>") {
 				inputs[b].previousSibling.style.backgroundPosition = "0 0";
 			}
 		}
