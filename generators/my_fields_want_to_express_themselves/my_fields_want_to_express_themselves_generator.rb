@@ -17,7 +17,7 @@ class MyFieldsWantToExpressThemselvesGenerator < Rails::Generator::NamedBase
       dir = File.join(RAILS_ROOT, @images_path)
       Dir.mkdir(dir) unless File.directory?(dir)
       
-      record do |m|
+      generate_files = record do |m|
          m.template 'custom-form-elements.js', 'public/javascripts/custom-form-elements.js'
          m.file "checkbox.gif", "#{@images_path}/checkbox.gif"
          m.file "radio.gif", "#{@images_path}/radio.gif"
@@ -28,7 +28,9 @@ class MyFieldsWantToExpressThemselvesGenerator < Rails::Generator::NamedBase
       puts %Q{
          Your Form Elements now have Flair!
          
+         
          Copy and Paste the following to your css file:
+         
          /* Custom Checkbox */
          span.checkbox {
             width: 19px;
@@ -64,5 +66,6 @@ class MyFieldsWantToExpressThemselvesGenerator < Rails::Generator::NamedBase
          }
       }
       
+      generate_files
    end
 end

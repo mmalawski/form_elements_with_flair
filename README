@@ -15,7 +15,7 @@ Usage
 =====
 
 From application root:
-ruby script/generate my_fields_want_to_express_themselves
+ruby script/generate my_fields_want_to_express_themselves with_class:<flair field class name here>
 
 
 Once script is finished running, css will be outputted, copy and paste it into your application css file.
