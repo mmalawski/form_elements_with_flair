@@ -2,6 +2,7 @@ class MyFieldsWantToExpressThemselvesGenerator < Rails::Generator::NamedBase
    attr_accessor :with_class, :checkbox_height, :radio_height, :select_width, :images_path
    
    def initialize(*runtime_args)
+      *runtime_args[0] = (runtime_args[0] = "with_class:with_flair") if runtime_args[0].empty?
       super(*runtime_args)
       @with_class ||= "with_flair"
       @checkbox_height ||= 25

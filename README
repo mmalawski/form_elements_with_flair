@@ -15,10 +15,10 @@ Usage
 =====
 
 From application root:
-ruby script/generate my_fields_want_to_express_themselves with_class:<flair field class name here>
+ruby script/generate my_fields_want_to_express_themselves
 
 
-Once script is finished running, css will be outputted, copy and paste it into your application css file.
+After script is finished running, css will be outputted, copy and paste it into your application's css file.
 
 
 Add the following to the top your layout view:
@@ -40,11 +40,11 @@ Customization
 By default, FormElementsWithFlair will use Ryan Fait's example checkbox and radio buttons. These images can be modified by using a image editor such as Photoshop. For more information on customization, read: http://ryanfait.com/resources/custom-checkboxes-and-radio-buttons
 
 my_fields_want_to_express_themselves generator takes in the following options:
-with_class - class name for custom style (default: "with_flair")
-checkbox_height - height of checkbox (default: 25)
-radio_height - height of radio button (default: 25)
-select_width - width of select (default: 190)
-images_path - directory to store custom field graphics (default: "public/images/form_elements_with_flair")
+with_class         class name for custom style (default: "with_flair")
+checkbox_height    height of checkbox (default: 25)
+radio_height       height of radio button (default: 25)
+select_width       width of select (default: 190)
+images_path        directory to store custom field graphics (default: "public/images/form_elements_with_flair")
 
 
 

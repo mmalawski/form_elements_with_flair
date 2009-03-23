@@ -1,0 +1,12 @@
+ruby script/generate my_fields_want_to_express_themselves
+
+Options:
+    with_class           class name for custom style (default: "with_flair")
+    checkbox_height      height of checkbox (default: 25)
+    radio_height         height of radio button (default: 25) 
+    select_width         width of select (default: 190)
+    images_path          directory to store custom field graphics (default: "public/images/form_elements_with_flair")
+
+
+Example changing class name to "flair_field":
+ruby script/generate my_fields_want_to_express_themselves with_class:flair_field
